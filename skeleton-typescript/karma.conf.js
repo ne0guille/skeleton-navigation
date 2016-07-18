@@ -6,7 +6,7 @@ module.exports = function(config) {
       configFile: 'config.js',
       config: {
         paths: {
-          "*": null,
+          "*": "*",
           "src/*": "src/*",
           "typescript": "node_modules/typescript/lib/typescript.js",
           "systemjs": "node_modules/systemjs/dist/system.js",
@@ -21,15 +21,21 @@ module.exports = function(config) {
             defaultExtension: 'ts'
           }
         },
-        transpiler: 'typescript'
+        transpiler: 'typescript',
+        typescriptOptions : {
+          "module": "amd",
+          "emitDecoratorMetadata": true,
+          "experimentalDecorators": true
+        }
       },
       serveFiles: [
-        'src/**/*.ts',
+        'src/**/*.*',
         'jspm_packages/**/*.js'
       ]
     },
     files: [
-      'test/unit/*.spec.ts'
+      'test/unit/setup.ts',
+      'test/unit/*.ts'
     ],
     exclude: [],
     preprocessors: { },

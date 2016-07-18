@@ -24,15 +24,14 @@ module.exports = {
         '/css/font-awesome.min.css',
         '/fonts/*'
       ]
-    ], [
-      // include bootstrap's font files
-      'bootstrap', [
-        '/fonts/*'
-      ]
-    ], [
-      'bluebird', [
-        '/js/browser/bluebird.min.js'
-      ]
     ]
   ]
 };
+/*
+, [
+      // include foundation's font files
+      'foundation', [
+        '/fonts/*'
+      ]
+    ]
+*/

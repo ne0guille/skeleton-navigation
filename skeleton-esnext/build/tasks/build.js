@@ -35,12 +35,13 @@ gulp.task('build-html', function() {
 
 // copies changed css files to the output directory
 gulp.task('build-css', function() {
+  debugger;
   return gulp.src(paths.css)
     .pipe(changed(paths.output, {extension: '.css'}))
     .pipe(gulp.dest(paths.output))
     .pipe(browserSync.stream());
 });
-
+debugger; 
 // this task calls the clean task (located
 // in ./clean.js), then runs the build-system
 // and build-html tasks in parallel

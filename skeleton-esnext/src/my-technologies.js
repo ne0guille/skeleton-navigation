@@ -1,3 +1,5 @@
+import 'swiper';
+
 export class MyTechnologies {
 	
 	constructor(){
